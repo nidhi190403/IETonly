@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Functions Example</title>
+</head>
+<body>
+
+    <h2>Array Operations</h2>
+    Enter Value:
+    <input type="text" id="inputData">
+    <br><br>
+    <button onclick="addData()">Add</button>
+    <button onclick="displayData()">Display</button>
+
+    <br><br>
+
+    <ul id="outputList"></ul>
+
+    <script>
+        let arr = [];
+
+        function addData() {
+            let value = document.getElementById("inputData").value;
+
+            if (value === "") {
+                alert("Please enter some value");
+                return;
+            }
+
+            arr.push(value); 
+            document.getElementById("inputData").value = ""; 
+        }
+        function displayData() {
+            let list = document.getElementById("outputList");
+            list.innerHTML = ""; 
+
+            for (let i = 0; i < arr.length; i++) {
+                let li = document.createElement("li");
+                li.textContent = arr[i];
+                list.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>

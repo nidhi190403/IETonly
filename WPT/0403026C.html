@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Transformation</title>
+</head>
+<body>
+    <h2>Text Converter</h2>
+    Enter Text:
+    <input type="text" id="textInput">
+    <br><br>
+    <input type="radio" name="case" onclick="convertText()" value="upper"> UpperCase
+    <input type="radio" name="case" onclick="convertText()" value="lower"> LowerCase
+    <input type="radio" name="case" onclick="convertText()" value="asis"> As It Is
+    <br><br>
+    <p id="output"></p>
+    <script>
+        function convertText() {
+            let text = document.getElementById("textInput").value;
+            let options = document.getElementsByName("case");
+            let result = text;
+
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].checked) {
+                    if (options[i].value === "upper") {
+                        result = text.toUpperCase();
+                    } 
+                    else if (options[i].value === "lower") {
+                        result = text.toLowerCase();
+                    } 
+                    else {
+                        result = text;
+                    }
+                }
+            }
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

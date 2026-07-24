@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Operations</title>
+</head>
+<body>
+
+<h3>Array Operations</h3>
+
+<input type="number" id="value" placeholder="Enter value"><br><br>
+
+<button onclick="search()">Search</button>
+<p id="searchResult"></p>
+
+<button onclick="addEnd()">Add to End</button><br><br>
+
+<input type="number" id="index" placeholder="Enter index"><br><br>
+
+<button onclick="insert()">Insert at Index</button>
+<p id="insertResult"></p>
+
+<button onclick="remove()">Remove at Index</button>
+<p id="removeResult"></p>
+
+<script>
+let arr = [10, 20, 30, 40];
+
+function search()
+{
+    let val = document.getElementById("value").value;
+    let found = false;
+
+    for(let i = 0; i < arr.length; i++)
+    {
+        if(arr[i] == val)
+        {
+            found = true;
+            break;
+        }
+    }
+
+    if(found)
+        document.getElementById("searchResult").innerText = "Found";
+    else
+        document.getElementById("searchResult").innerText = "Not Found";
+}
+
+function addEnd()
+{
+    let val = document.getElementById("value").value;
+    arr.push(Number(val));
+
+    alert("Added! Current Array: " + arr);
+}
+
+function insert()
+{
+    let val = document.getElementById("value").value;
+    let index = document.getElementById("index").value;
+
+    arr.splice(index, 0, Number(val));
+
+    document.getElementById("insertResult").innerText = "Array: " + arr;
+}
+
+function remove()
+{
+    let index = document.getElementById("index").value;
+
+    arr.splice(index, 1);
+
+    document.getElementById("removeResult").innerText = "Array: " + arr;
+}
+</script>
+
+</body>
+</html>
