@@ -1,0 +1,21 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "language_info": {
+      "name": "java"
+    }
+  },
+  "cells": [
+    {
+      "id": "cd72df49-1c09-4812-bd94-56ff2b7c7777",
+      "cell_type": "code",
+      "source": "Create an HTML page that fetches data from https://jsonplaceholder.typicode.com/users using the Fetch API and displays the users in a responsive HTML table. Include CSS styling and proper error handling. Use only HTML, CSS, and JavaScript in a single file.",
+      "metadata": {
+        "language": "java"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
